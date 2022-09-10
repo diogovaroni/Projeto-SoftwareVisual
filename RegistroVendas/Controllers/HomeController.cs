@@ -17,7 +17,7 @@ namespace RegistroVendas.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Aplicativo Web MVC de Cadastro de Vendas em uma loja de departamento.";
 
             return View();
         }
