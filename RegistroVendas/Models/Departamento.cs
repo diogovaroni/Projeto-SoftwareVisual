@@ -24,5 +24,17 @@ namespace RegistroVendas.Models
             Id = id;
             Nome = nome;
         }
+
+        //Método para adicionar um vendedor no departamento
+        public void AdicionarVendedor(Vendedor vendedor)
+        {
+            Vendedores.Add(vendedor);
+        }
+
+        //Método para retornar o total de vendas do departamento
+        public double TotalVendas(DateTime inicial, DateTime final)
+        {
+            return Vendedores.Sum(vendedor => vendedor.TotalVendas(inicial, final));
+        }
     }
 }

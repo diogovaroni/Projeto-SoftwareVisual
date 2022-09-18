@@ -35,6 +35,25 @@ namespace RegistroVendas.Models
             BaseSalarial = baseSalarial;
             Departamento = departamento;            
         }
+
+        //Método para adicionar uma venda ao vendedor
+        public void AdicionarVenda(RegistroVendas rv)
+        {
+            Vendas.Add(rv);
+        }
+
+        //Método para remover uma venda do vendedor
+        public void RemoverVenda(RegistroVendas rv)
+        {
+            Vendas.Remove(rv);
+        }
+
+        //Método para retornar o total de vendas do vendedor
+        public double TotalVendas(DateTime inicial, DateTime final) 
+        {
+            return Vendas.Where(rv => rv.DataVenda >= inicial && rv.DataVenda <= final).Sum(rv => rv.Valor);
+        }
+
     }
 }
 
