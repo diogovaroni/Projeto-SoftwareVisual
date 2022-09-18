@@ -4,7 +4,7 @@ using System;
 
 namespace RegistroVendas.Models
 {
-    public class RegistroVendas
+    public class Vendas
     {
         public int Id { get; set; }
         public DateTime DataVenda { get; set; }
@@ -15,12 +15,12 @@ namespace RegistroVendas.Models
         public Vendedor Vendedor { get; set; }
 
         //Construtor sem argumentos
-        public RegistroVendas()
+        public Vendas()
         {
 
         }
         //Construtor com argumentos
-        public RegistroVendas(int id, DateTime dataVenda, double valor,
+        public Vendas(int id, DateTime dataVenda, double valor,
             VendaStatus status, Vendedor vendedor)
         {
             Id = id;

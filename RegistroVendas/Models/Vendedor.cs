@@ -17,7 +17,7 @@ namespace RegistroVendas.Models
         public Departamento Departamento { get; set; }
 
         //Implementação da associação entre a classe Vendedor e RegistroVendas
-        public ICollection<RegistroVendas> Vendas { get; set; } = new List<RegistroVendas>();
+        public ICollection<Vendas> Vendas { get; set; } = new List<Vendas>();
 
         //Construtor sem argumentos
         public Vendedor()
@@ -37,21 +37,21 @@ namespace RegistroVendas.Models
         }
 
         //Método para adicionar uma venda ao vendedor
-        public void AdicionarVenda(RegistroVendas rv)
+        public void AdicionarVenda(Vendas v)
         {
-            Vendas.Add(rv);
+            Vendas.Add(v);
         }
 
         //Método para remover uma venda do vendedor
-        public void RemoverVenda(RegistroVendas rv)
+        public void RemoverVenda(Vendas v)
         {
-            Vendas.Remove(rv);
+            Vendas.Remove(v);
         }
 
         //Método para retornar o total de vendas do vendedor
         public double TotalVendas(DateTime inicial, DateTime final) 
         {
-            return Vendas.Where(rv => rv.DataVenda >= inicial && rv.DataVenda <= final).Sum(rv => rv.Valor);
+            return Vendas.Where(v => v.DataVenda >= inicial && v.DataVenda <= final).Sum(v => v.Valor);
         }
 
     }

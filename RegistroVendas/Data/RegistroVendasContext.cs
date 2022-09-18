@@ -14,6 +14,16 @@ namespace RegistroVendas.Data
         {
         }
 
+        //Adição do DbSet da classe 'Departamento'
         public DbSet<RegistroVendas.Models.Departamento> Departamento { get; set; }
+
+        //Adição do DbSet da classe 'Vendedor'
+        public DbSet<RegistroVendas.Models.Vendedor> Vendedor { get; set; }
+
+        //Adição do DbSet da classe 'Vendas'
+        public DbSet<RegistroVendas.Models.Vendas> Vendas { get; set; }
     }
 }
+
+
+
