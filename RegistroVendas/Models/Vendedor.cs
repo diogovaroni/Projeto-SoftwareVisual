@@ -16,8 +16,14 @@ namespace RegistroVendas.Models
         //Associação da classe Vendedor com a classe Departamento
         public Departamento Departamento { get; set; }
 
+        //Chave estrangeira não nula
+        public int DepartamentoId { get; set; }
+
         //Implementação da associação entre a classe Vendedor e RegistroVendas
         public ICollection<Vendas> Vendas { get; set; } = new List<Vendas>();
+
+
+        
 
         //Construtor sem argumentos
         public Vendedor()

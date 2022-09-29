@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RegistroVendas.Data;
 
 namespace RegistroVendas.Migrations
 {
     [DbContext(typeof(RegistroVendasContext))]
-    partial class RegistroVendasContextModelSnapshot : ModelSnapshot
+    [Migration("20220929022447_ChaveEstrangeiraDepartamento")]
+    partial class ChaveEstrangeiraDepartamento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
